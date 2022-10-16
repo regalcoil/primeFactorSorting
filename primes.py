@@ -2,6 +2,7 @@ def primeFinder():
 
 	lowLimit = int(input("Inclusive lower limit --> "))
 	upLimit = int(input("Inclusive upper limit --> "))
+	print("")
 
 	primes = []
 
@@ -24,6 +25,7 @@ def primeFinder():
 
 def antiPrime():
 	upLimit = int(input("Inclusive upper limit --> "))
+	print("")
 
 	antiPrimes = []
 
@@ -55,6 +57,7 @@ def factorization():
 
 	while y <= 1:
 		y = int(input("Enter a number greater than 1 to factorize --> "))
+		print("")
 
 	primes = []
 
@@ -88,8 +91,9 @@ def factorization():
 
 def calcLoop():
 	print("")
-	actionStep = input("Find `prime` numbers, `antiprime` numbers or `factorize` a number --> ")
+	actionStep = raw_input("Find `prime` numbers, `antiprime` numbers or `factorize` a number --> ")
 	print("")
+	actionStep = actionStep.lower()
 
 	if actionStep == "prime":
 		primeFinder()
@@ -104,5 +108,4 @@ def calcLoop():
 		calcLoop()
 
 calcLoop()
-
 
